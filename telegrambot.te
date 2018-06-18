@@ -1,4 +1,14 @@
 policy_module(telegrambot, 1.0)
 
+type telegrambot_t;
+type telegrambot_exec_t;
+init_daemon_domain(telegrambot_t, telegrambot_exec_t)
+
 type telegrambot_port_t;
 corenet_port(telegrambot_port_t)
+
+allow telegrambot_t self:tcp_socket create_stream_socket_perms;
+allow telegrambot_t telegrambot_port_t:tcp_socket name_bind;
+corenet_tcp_bind_generic_node(telegrambot_t)
+corenet_tcp_connect_http_port(telegrambot_t)
+sysnet_dns_name_resolve(telegrambot_t)

@@ -1,0 +1,1 @@
+/usr/local/sbin/telegrambotd            --          gen_context(system_u:object_r:telegrambot_exec_t)
