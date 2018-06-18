@@ -1,0 +1,4 @@
+policy_module(telegrambot, 1.0)
+
+type telegrambot_port_t;
+corenet_port(telegrambot_port_t)
