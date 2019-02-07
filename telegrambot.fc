@@ -1,1 +1,2 @@
 /usr/local/sbin/telegrambotd            --          gen_context(system_u:object_r:telegrambot_exec_t)
+/etc/telegrambotd.conf                  --          gen_context(system_u:object_r:telegrambot_conf_t)
